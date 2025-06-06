@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo-app</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="card">
+        <div class="title">
+        <h1 class="heading">My Tasks</h1>
+        <h1 class="time">Friday, Jun 6</h1>
+        </div>
+        <div id="task-progress">
+            <h4> 2 of 4 tasks completed </h4>
+        </div>
+        <div class="add">
+            <div class="search">
+                <img src="./assets/todo.svg" height="20" width="20" alt="todo-svg">
+                <input id="input" type="text" placeholder="Add a new task ...">
+                <button><img src="./assets/plus.svg" height="45" width="45"  alt="plus-svg"></button>
+            </div>
+        </div>
+        <div id="filter-options">
+            <div id="options">
+            <div class="individual-options">All</div>
+            <div class="individual-options">Active</div>
+            <div class="individual-options">Completed</div>
+            </div>
+            <button id="clear">Clear Completed</button>
+        </div>
+        <div id="tasks">
+            <div class="individual-tasks">
+                <div id="info-left">
+                <input type="checkbox">
+                <h4>Task 1</h4>
+                </div>
+                <div id="info">    
+                <h5>Today</h5>
+                <button><img src="./assets/delete.png" height="15" width="15" alt="delete-icon"></button>
+                </div>
+            </div>           
+            <div class="individual-tasks">
+                <div id="info-left">
+                <input type="checkbox">
+                <h4>Task 2</h4>
+                </div>
+                <div id="info">
+                <h5>Today</h5>
+                <button><img src="./assets/delete.png" height="15" width="15" alt="delete-icon"></button>
+                </div>
+            </div>
+            <div class="individual-tasks">
+                <div id="info-left">
+                <input type="checkbox">
+                <h4>Task 3</h4>
+                </div>
+                <div id="info">
+                <h5>Today</h5>
+                <button><img src="./assets/delete.png" height="15" width="15" alt="delete-icon"></button>
+                </div>
+            </div>
+            <div class="individual-tasks">
+                <div id="info-left">
+                <input type="checkbox">
+                <h4>Task 4</h4>
+                </div>
+                <div id="info">
+                <h5>Today</h5>
+                <button><img src="./assets/delete.png" height="15" width="15" alt="delete-icon"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
