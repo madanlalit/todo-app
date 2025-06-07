@@ -15,11 +15,14 @@ justify-content: center;
 #card {
     background-color: #ffffff;
     width: 500px;
-    max-height: 700px;
     border-radius: 12px;
+    max-height: 700px;
     margin-top: 80px;
     box-shadow: 10px black 10px 20px;
     overflow: hidden;
+    transition: max-height 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -144,10 +147,27 @@ overflow: hidden;
 }
 
 #tasks {
-    height: auto;
-    width: auto;
+    display: flex;
+    flex-direction: column;
     padding: 10px 25px;
+    gap: 10px;
+    max-height: 390px;
+    flex: 1;
+    overflow-y: auto;
+    border-bottom: 1px solid #f3f4f6;
 }
+
+#tasks::-webkit-scrollbar {
+  width: 8px;
+}
+#tasks::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 8px;
+}
+#tasks::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
 
 .individual-tasks {
     background-color: inherit;
@@ -160,6 +180,7 @@ overflow: hidden;
     margin-top: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
+
 }
 
 .individual-tasks:hover {
@@ -212,4 +233,18 @@ overflow: hidden;
     position: relative;
     top: 1px;
     color: #9ca3af;
+}
+
+#update {
+    padding: 10px 25px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#update h5 {
+    position: relative;
+    top: 8px;
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 500;
 }
