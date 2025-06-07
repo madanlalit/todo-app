@@ -124,13 +124,14 @@ body {
   font-size: 15px;
   border: none;
   color: #4b5563;
+  cursor: pointer;
 }
 
 .individual-options:hover {
   background-color: #f3f4f6;
 }
 
-.individual-options:active :focus {
+.individual-options.active {
   background-color: #e5f2ff;
   color: #007bff;
 }
@@ -198,31 +199,53 @@ body {
   font-weight: 500;
 }
 
-#info-left {
+.info-left {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#info-left h4 {
+.info-left h4 {
   margin-left: 10px;
   width: auto;
   height: auto;
 }
 
-#info {
+.info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#info h5 {
+.info h5 {
   color: #9ca3af;
   border-radius: 10px;
   background-color: #f3f4f6;
   padding: 2px 6px;
   font-size: 12px;
   font-weight: 500;
+}
+
+.delete-button {
+  background-color: inherit;
+  border: none;
+  padding: 2px 6px;
+}
+
+.delete-button svg {
+  position: relative;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  color: #888;
+}
+
+.delete-button svg:hover {
+  color: #e74c3c;
+}
+
+.hidden {
+  display: none;
 }
 
 #update {
@@ -237,22 +260,4 @@ body {
   font-size: 12px;
   color: #6b7280;
   font-weight: 500;
-}
-
-#delete-button {
-  background-color: inherit;
-  border: none;
-  padding: 2px 6px;
-}
-
-#delete-button svg {
-  position: relative;
-  top: 1px;
-  width: 16px;
-  height: 16px;
-  color: #888;
-}
-
-#delete-button svg:hover {
-  color: #e74c3c;
 }
