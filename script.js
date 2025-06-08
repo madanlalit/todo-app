@@ -57,6 +57,7 @@ function createTaskElement(taskText) {
   deleteButton.addEventListener("click", () => {
     taskDiv.remove();
     updateTaskProgress();
+    saveTasksToLocalStorage(); // Save after deleting
   });
 
   info.appendChild(date);
@@ -76,6 +77,7 @@ addButton.addEventListener("click", () => {
   taskCard.appendChild(taskDiv);
   taskInput.value = "";
   updateTaskProgress();
+  saveTasksToLocalStorage(); // Save after adding
 });
 
 // Initialize existing tasks (if any in HTML)
@@ -88,6 +90,7 @@ document.querySelectorAll('.individual-tasks').forEach(taskDiv => {
     deleteButton.addEventListener('click', () => {
       taskDiv.remove();
       updateTaskProgress();
+      saveTasksToLocalStorage(); // Save after deleting
     });
   }
 });
@@ -100,6 +103,7 @@ clearButton.addEventListener('click', () => {
     if (card) card.remove();
   });
   updateTaskProgress();
+  saveTasksToLocalStorage(); // Save after clearing
 });
 
 // Filter Buttons
@@ -142,6 +146,31 @@ completeButton.addEventListener('click', () => {
   });
 });
 
-// Initial progress update
+// Save and Load Tasks
+function saveTasksToLocalStorage() {
+  const tasks = [];
+  document.querySelectorAll('.individual-tasks').forEach(taskDiv => {
+    const checkbox = taskDiv.querySelector('input[type="checkbox"]');
+    const title = taskDiv.querySelector('h4').textContent;
+    tasks.push({
+      title,
+      completed: checkbox.checked
+    });
+  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function loadTasksFromLocalStorage() {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  tasks.forEach(task => {
+    const taskDiv = createTaskElement(task.title);
+    const checkbox = taskDiv.querySelector('input[type="checkbox"]');
+    checkbox.checked = task.completed;
+    taskCard.appendChild(taskDiv);
+  });
+}
+
+// Load tasks on initial page load
+loadTasksFromLocalStorage();
 updateTaskProgress();
 
