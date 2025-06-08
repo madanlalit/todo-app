@@ -4,7 +4,7 @@ A simple, modern to-do list web application built with vanilla JavaScript, HTML,
 
 ## Demo
 
-![todo app demo](demo/demo.mov)
+https://github.com/user-attachments/assets/83494f85-ac9c-4d0b-9821-7162615d1d91
 
 ## Features
 
