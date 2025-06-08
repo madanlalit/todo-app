@@ -2,6 +2,10 @@
 
 A simple, modern to-do list web application built with vanilla JavaScript, HTML, and CSS.
 
+## Demo
+
+![todo app demo](demo/demo.mov)
+
 ## Features
 
 - Add, complete, and delete tasks
@@ -14,13 +18,13 @@ A simple, modern to-do list web application built with vanilla JavaScript, HTML,
 
 1. **Clone or Download the Repository**
 
-   ```
-   git clone <repository-url>
-   ```
+    ```
+    git clone <repository-url>
+    ```
 
 2. **Open the App**
 
-   Open `index.html` in your web browser.
+    Open `index.html` in your web browser.
 
 ## Project Structure
 
@@ -30,6 +34,8 @@ A simple, modern to-do list web application built with vanilla JavaScript, HTML,
 │   ├── delete.png
 │   ├── plus.svg
 │   └── todo.svg
+├── demo/
+│   └── demo.mov
 ├── favicon.ico
 ├── index.html
 ├── script.js
@@ -41,6 +47,7 @@ A simple, modern to-do list web application built with vanilla JavaScript, HTML,
 - `style.css` - App styling
 - `script.js` - App logic (task management, filtering, local storage)
 - `assets/` - Icons and images
+- `demo/` - Demo files
 
 ## Customization
 
